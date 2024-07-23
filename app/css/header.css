@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    text-align: center;
+    width: 10%;
+}
+
+img {
+    width: 50%;
+    height: auto;
+}
+
+.links {
+    width: 80%;
+    text-align: center;
+}
+
+a {
+    padding: 0 6rem;
+    color: black;
+    text-decoration: underline gray;
+    font-size: 1.2rem;
+}
+
+a:hover {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-shadow: 1px 1px 1px #D6EFD8;
+}
