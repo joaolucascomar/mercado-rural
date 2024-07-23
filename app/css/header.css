@@ -23,7 +23,7 @@ img {
 }
 
 a {
-    padding: 0 6rem;
+    margin: 0 6rem;
     color: black;
     text-decoration: underline gray;
     font-size: 1.2rem;

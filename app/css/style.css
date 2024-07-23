@@ -2,9 +2,23 @@ body {
     margin: 0;
 }
 
+.header, .footer {
+    width: 100%;
+    border: none;
+}
+
+.header {
+    height: 60px;
+}
+
+.footer {
+    height: 60px;
+    display: block;
+}
+
 .banner {
     position: relative;
-    height: 85vh;
+    height: 60vh;
     overflow: hidden;
     background-color: black;
 }
@@ -23,33 +37,35 @@ body {
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
+    width: 60%;
 }
 
 .texto-banner h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2rem;
 }
 
 .texto-banner p {
     margin: 1vh 0 0;
-    font-size: 1.2em;
+    font-size: 1rem;
 }
 
 .cards {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
-    width: 80%;
+    width: 90%;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 .card {
-    background-color: #fff;
+    background-color: white;
     border: 2px solid #043b22;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 45%;
+    box-shadow: 0 4px 8px lightgray;
+    width: 100%;
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
@@ -67,8 +83,8 @@ body {
 }
 
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
+    width: 100%;
+    padding: 10px;
     background-color: #043b22;
     color: #fff;
     text-decoration: none;
@@ -78,4 +94,71 @@ body {
 
 .btn:hover {
     background-color: #032b1b;
+}
+
+/* Estilos para tablets */
+@media (min-width: 768px) {
+    .header {
+        height: 75px;
+    }
+
+    .footer {
+        height: 75px;
+    }
+
+    .banner {
+        height: 85vh;
+    }
+
+    .texto-banner h1 {
+        font-size: 2em;
+    }
+
+    .texto-banner p {
+        font-size: 1em;
+    }
+
+    .cards {
+        width: 80%;
+    }
+
+    .card {
+        width: 80%;
+    }
+}
+
+/* Estilos para Desktop */
+@media (min-width: 1440px) {
+    .header {
+        height: 85px;
+    }
+
+    .footer {
+        height: 75px;
+    }
+
+    .banner {
+        height: 85vh;
+    }
+
+    .texto-banner h1 {
+        font-size: 2.5em;
+    }
+
+    .texto-banner p {
+        font-size: 1.2em;
+    }
+
+    .cards {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    .btn {
+        width: auto;
+    }
 }
