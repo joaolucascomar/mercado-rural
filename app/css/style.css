@@ -130,7 +130,7 @@ body {
 /* Estilos para Desktop */
 @media (min-width: 1440px) {
     .header {
-        height: 85px;
+        height: 88px;
     }
 
     .footer {
