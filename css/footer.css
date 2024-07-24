@@ -1,9 +1,11 @@
+@import url('variaveis.css');
+
 body {
     margin: 0;
 }
 
 footer {
-    background-color: #043b22;
+    background-color: var(--cor-primaria);
     display: flex;
     justify-content: center;
     align-items: center;

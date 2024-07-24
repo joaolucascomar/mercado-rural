@@ -1,3 +1,5 @@
+@import url('variaveis.css');
+
 .banner {
     position: relative;
     height: 60vh;
@@ -44,7 +46,7 @@
 
 .card {
     background-color: white;
-    border: 2px solid #043b22;
+    border: 2px solid var(--cor-primaria);
     border-radius: 10px;
     box-shadow: 0 4px 8px lightgray;
     width: 100%;
@@ -54,7 +56,7 @@
 }
 
 .card h2 {
-    color: #043b22;
+    color: var(--cor-primaria);
     margin-bottom: 15px;
 }
 
@@ -67,7 +69,7 @@
 .btn {
     width: 100%;
     padding: 10px;
-    background-color: #043b22;
+    background-color: var(--cor-primaria);
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -75,7 +77,7 @@
 }
 
 .btn:hover {
-    background-color: #032b1b;
+    background-color: var(--hover-botao);
 }
 
 /* Estilos para tablets */

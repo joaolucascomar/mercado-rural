@@ -1,3 +1,5 @@
+@import url('variaveis.css');
+
 body {
     margin: 0;
 }
@@ -14,27 +16,37 @@ header {
     width: 15%;
 }
 
+.btn {
+    padding: 3px;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+    margin-left: 1rem;
+}
+
+.btn:hover {
+    background-color: var(--hover-botao);
+}
+
 img {
     width: 100%;
     height: auto;
 }
 
 .links {
-    width: 80%;
-    text-align: center;
+    width: 85%;
+    text-align: end;
+    margin-right: 1rem;
 }
 
 a {
-    margin: 0 1rem;
-    color: black;
-    text-decoration: underline gray;
-    font-size: 1rem;
-}
-
-a:hover {
-    font-size: 1.5rem;
-    text-decoration: underline;
-    text-shadow: 1px 1px 1px #D6EFD8;
+    margin: 0 0.5rem;
+    color: white;
+    font-size: 0.7rem;
+    font-family: var(--fonte-secundaria);
+    text-decoration: none;
 }
 
 /* Estilos para Tablets */
@@ -43,36 +55,30 @@ a:hover {
         width: 15%;
     }
 
+    .links {
+        margin-right: 1rem;
+    }
+
     img {
         width: 60%
     }
 
-    .links {
-        margin-right: 6rem;
-    }
-
     a {
-        margin: 0 3rem;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 }
 
 /* Estilos para laptops */
 @media (min-width: 1024px) {
     .logo {
-        width: 15%;
+        width: 10%;
     }
 
     img {
-        width: 45%
-    }
-
-    .links {
-        margin-right: 9rem;
+        width: 60%
     }
 
     a {
-        margin: 0 3rem;
         font-size: 1.2rem;
     }
 }
@@ -83,16 +89,16 @@ a:hover {
         width: 10%;
     }
 
+    .links {
+        width: 90%;
+        margin-right: 3rem;
+    }
+
     img {
         width: 55%
     }
 
-    .links {
-        margin-right: 10rem;
-    }
-
     a {
-        margin: 0 6rem;
         font-size: 1.2rem;
     }
 }
