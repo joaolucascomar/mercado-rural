@@ -37,30 +37,38 @@ a:hover {
     text-shadow: 1px 1px 1px #D6EFD8;
 }
 
-/* Estilos para tablets */
+/* Estilos para Tablets */
 @media (min-width: 768px) {
     .logo {
         width: 15%;
     }
 
     img {
-        width: 75%
+        width: 60%
+    }
+
+    .links {
+        margin-right: 6rem;
     }
 
     a {
         margin: 0 3rem;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 }
 
 /* Estilos para laptops */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .logo {
         width: 15%;
     }
 
     img {
         width: 45%
+    }
+
+    .links {
+        margin-right: 9rem;
     }
 
     a {
@@ -77,6 +85,10 @@ a:hover {
 
     img {
         width: 55%
+    }
+
+    .links {
+        margin-right: 10rem;
     }
 
     a {
