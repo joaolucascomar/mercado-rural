@@ -1,0 +1,11 @@
+@import url(../css/variaveis.css);
+
+.titulo {
+    font-family: var(--fonte-principal);
+    color: var(--cor-primaria);
+    margin-left: 10%;
+}
+
+.categoria {
+    display: none;
+}
