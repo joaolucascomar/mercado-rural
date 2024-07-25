@@ -59,7 +59,7 @@ const produtos = [
   {
     id: 200,
     nome: 'Bala',
-    img: 'produto.png',
+    img: '../images/produto',
     quantidade: 0,
     valor_unidade: 0.15
   }
