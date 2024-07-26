@@ -3,7 +3,7 @@ const produtos = [
   {
     id: 100,
     nome: 'Trento',
-    img: 'produto.png',
+    img: '../../images/produto.png',
     quantidade: 0,
     valor_unidade: 2.50
   },
@@ -11,57 +11,17 @@ const produtos = [
   {
     id: 200,
     nome: 'Bala',
-    img: 'produto.png',
+    img: '../../images/produto.png',
     quantidade: 0,
     valor_unidade: 0.15
   },
 
   {
     id: 200,
-    nome: 'Bala',
-    img: 'produto.png',
+    nome: 'Refri',
+    img: '../../images/produto.png',
     quantidade: 0,
-    valor_unidade: 0.15
-  },
-
-  {
-    id: 200,
-    nome: 'Bala',
-    img: 'produto.png',
-    quantidade: 0,
-    valor_unidade: 0.15
-  },
-
-  {
-    id: 200,
-    nome: 'Bala',
-    img: 'produto.png',
-    quantidade: 0,
-    valor_unidade: 0.15
-  },
-
-  {
-    id: 200,
-    nome: 'Bala',
-    img: 'produto.png',
-    quantidade: 0,
-    valor_unidade: 0.15
-  },
-
-  {
-    id: 200,
-    nome: 'Bala',
-    img: 'produto.png',
-    quantidade: 0,
-    valor_unidade: 0.15
-  },
-
-  {
-    id: 200,
-    nome: 'Bala',
-    img: '../images/produto',
-    quantidade: 0,
-    valor_unidade: 0.15
+    valor_unidade: 3.00
   }
 ]
 
@@ -198,6 +158,13 @@ mapearLinks = () => {
       atualizarCarrinho();
     })
   } 
+}
+
+function finalizarCompra() {
+  alert('Compra Finalizada com sucesso');
+  produtos_selecionados.length = 0;
+  atualizarCarrinho();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 inicializarLoja();
