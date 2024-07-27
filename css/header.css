@@ -19,7 +19,7 @@ header {
 .btn {
     padding: 3px;
     background-color: var(--cor-primaria);
-    color: #fff;
+    color: white;
     text-decoration: none;
     border-radius: 15px;
     transition: background-color 0.3s;
@@ -27,7 +27,7 @@ header {
 }
 
 .btn:hover {
-    background-color: var(--hover-botao);
+    background-color: var(--cor-secundaria);
 }
 
 img {

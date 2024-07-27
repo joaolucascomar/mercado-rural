@@ -1,29 +1,4 @@
 const produtos_selecionados = [];
-const produtos = [
-  {
-    id: 100,
-    nome: 'Trento',
-    img: '../../images/produto.png',
-    quantidade: 0,
-    valor_unidade: 2.50
-  },
-
-  {
-    id: 200,
-    nome: 'Bala',
-    img: '../../images/produto.png',
-    quantidade: 0,
-    valor_unidade: 0.15
-  },
-
-  {
-    id: 200,
-    nome: 'Refri',
-    img: '../../images/produto.png',
-    quantidade: 0,
-    valor_unidade: 3.00
-  }
-]
 
 listaDosProdutos = () => {
   listaDosProdutos = "";
@@ -43,7 +18,7 @@ listaDosProdutos = () => {
 inicializarLoja = () => {
   var containerProdutos = document.getElementById('produtos');
   containerProdutos.innerHTML = `
-    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+    <div>
       <table class="table table-bordered table-hover">
         <thead>
           <tr>
@@ -99,7 +74,7 @@ atualizarValorTotal = () => {
   
   if (produtos_selecionados.length > 0){
     containerCarrinho.innerHTML+= `
-      ${valorTotal().toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}
+      R$ ${valorTotal().toFixed(2)}
     `;
   }
 }
@@ -164,7 +139,7 @@ function finalizarCompra() {
   alert('Compra Finalizada com sucesso');
   produtos_selecionados.length = 0;
   atualizarCarrinho();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 inicializarLoja();

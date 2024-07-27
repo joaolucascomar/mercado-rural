@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
         mudarVisibilidadeCategoria(this.value);
     });
 
-    // Inicializa a visibilidade das categorias
     mudarVisibilidadeCategoria(select.value);
 });
 
