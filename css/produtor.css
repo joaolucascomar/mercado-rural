@@ -1,1 +1,33 @@
 @import url(../css/variaveis.css);
+
+.titulo {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.info-produtor {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.produtor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.produtor img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.contato {
+    margin-top: 20px;
+}
+
+.contato {
+    margin: 5px 0;
+}

@@ -9,9 +9,10 @@
 
 .localidade {
     display: flex;
-    align-items: center;
     margin-left: 5%;
     font-size: 1.2rem;
+    flex-direction: column;
+    align-items: baseline
 }
 
 .filtro {
@@ -103,6 +104,12 @@
 
 /* Estilos para tablets */
 @media (min-width: 768px) {
+    .localidade {
+        flex-direction: row;
+        align-items: center;
+        margin-left: 2.5%;
+    }
+
     .cards {
         width: 80%;
     }
@@ -114,6 +121,11 @@
 
 /* Estilos para Desktop e Laptop */
 @media (min-width: 1024px) {
+    .localidade {
+        flex-direction: row;
+        align-items: center;
+    }
+
     .cards {
         flex-direction: row;
         justify-content: space-around;
