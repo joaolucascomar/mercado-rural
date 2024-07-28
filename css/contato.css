@@ -1,7 +1,52 @@
 @import url('variaveis.css');
 
+.titulo {
+    font-family: var(--fonte-principal);
+    color: var(--cor-primaria);
+    margin-left: 10%;
+    margin-bottom: 0px;
+    font-size: 1.6rem;
+}
+
+.texto-contato {
+    font-size: 1.1rem;
+    font-family: var(--fonte-principal);
+    width: 90%;
+    margin: 0 auto;
+    line-height: 1.2;
+    text-align: justify;
+}
+
+.formulario {
+    width: 80%;
+    padding: 5%;
+    border-radius: 35px;
+    border: solid 1px var(--cor-primaria);
+    background-color: lightgray;
+    margin: 0 auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.subtitulo {
+    font-family: var(--fonte-principal);
+    color: var(--cor-secundaria);
+    font-size: 1.2rem;
+    margin-top: 0px;
+}
+
+.campos-formulario {
+    width: 90%;
+}
+
+.botao {
+    text-align: center;
+}
+
 .btn {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     background-color: var(--cor-primaria);
     color: white;
@@ -12,18 +57,42 @@
     font-weight: 400;
 }
 
-.formulario {
-    width: 80%;
-    padding: 5%;
-    border-radius: 37px;
-    background-color: #D9D9D9;
-    margin: 0 auto; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-#text {
-    width: 80%;
-    height: 30px;
+.btn:hover {
+    background-color: var(--cor-secundaria);
+}
+
+#nome {
+    width: 100%;
+}
+
+#email {
+    width: 100%;
+}
+
+#mensagem {
+    width: 100%;
+}
+
+/* Estilos para tablets */
+@media (min-width: 768px) {
+    .formulario {
+        width: 40%;
+        padding: 3%;
+    }
+
+    .texto-contato {
+        width: 80%;
+    }
+}
+
+/* Estilos para Desktop e Laptop */
+@media (min-width: 1024px) {
+    .formulario {
+        width: 30%;
+        padding: 2%;
+    }
+
+    .texto-contato {
+        width: 60%;
+    }
 }

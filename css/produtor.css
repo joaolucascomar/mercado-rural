@@ -101,6 +101,10 @@ table {
     font-family: var(--fonte-principal);
 }
 
+.btn:hover {
+    background-color: var(--cor-secundaria);
+}
+
 a {
     font-family: var(--fonte-principal);
     text-decoration: none;

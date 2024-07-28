@@ -102,6 +102,10 @@
     font-weight: 400;
 }
 
+.btn:hover {
+    background-color: var(--cor-secundaria);
+}
+
 /* Estilos para tablets */
 @media (min-width: 768px) {
     .localidade {

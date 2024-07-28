@@ -1,6 +1,6 @@
 const produtos_selecionados = [];
 
-listaDosProdutos = () => {
+function listaDosProdutos() {
   listaDosProdutos = "";
   produtos.map((produto, index)=>{
     listaDosProdutos += ` 
@@ -16,7 +16,7 @@ listaDosProdutos = () => {
   return listaDosProdutos;
 }
 
-inicializarLoja = () => {
+function inicializarLoja() {
   var containerProdutos = document.getElementById('produtos');
   containerProdutos.innerHTML = `
     <div>
@@ -37,20 +37,20 @@ inicializarLoja = () => {
   `;
 }
 
-removerProduto = (index) => {
+function removerProduto(index) {
   let produto = produtos_selecionados[index]
   produto.quantidade = 0;
   produtos_selecionados.splice(index, 1);
   atualizarCarrinho();
 }
 
-adicionarItem = (index) => {
+function adicionarItem(index) {
   let produto = produtos_selecionados[index]
   produto.quantidade++;
   atualizarCarrinho();
 }
 
-removerItem = (index) => {
+function removerItem(index) {
   let produto = produtos_selecionados[index]
   if (produto.quantidade <= 1){
     removerProduto(index);
@@ -60,7 +60,7 @@ removerItem = (index) => {
   }
 }
 
-valorTotal = () => {
+function valorTotal() {
   let valorTotal = 0.0;
   
   produtos_selecionados.map((produto)=>{
@@ -81,7 +81,7 @@ atualizarValorTotal = () => {
   }
 }
 
-atualizarCarrinho = () => {
+ function atualizarCarrinho() {
   var containerCarrinho = document.getElementById('carrinho');
   listaDosProdutosSelecionanos = "";
 
@@ -119,7 +119,7 @@ atualizarCarrinho = () => {
   atualizarValorTotal();
 }
 
-mapearLinks = () => {
+function mapearLinks() {
   var links = document.getElementsByClassName('adicionar');
   
   for(var i=0; i < links.length; i++){
