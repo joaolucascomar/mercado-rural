@@ -92,9 +92,9 @@ atualizarCarrinho = () => {
           <td>${produto.nome}</td>
           <td>${produto.quantidade}</td>
           <td>
-            <input type="button" value="+" onclick="adicionarItem(${index})">
-            <input type="button" value="-" onclick="removerItem(${index})">  
-            <input type="button" value="X" onclick="removerProduto(${index})">
+            <input type="button" class="btn" value="+" onclick="adicionarItem(${index})">
+            <input type="button" class="btn" value="-" onclick="removerItem(${index})">  
+            <input type="button" class="btn" value="X" onclick="removerProduto(${index})">
           </td>
         </tr>
       `;

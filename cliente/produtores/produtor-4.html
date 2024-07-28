@@ -12,11 +12,11 @@
   <iframe src="../../header.html" class="header"></iframe>
   <hr>
   <section class="info-produtor">
-    <h1 class="titulo">Horta Verde Vida</h1>
+    <h1 class="titulo">Campo Alegre</h1>
     <div class="produtor">
-      <img src="../../images/horta.jpg" alt="Imagem da Horta Verde Vida">
+      <img src="../../images/horta.jpg" alt="Imagem de uma horta">
       <div class="descricao">
-        <p>Na Horta Verde Vida, em Curitiba/PR, oferecemos verduras frescas, saudáveis e de qualidade, estamos há mais de 5 anos no ramo. Conheça nossos produtos e sinta o frescor direto do campo!</p>
+        <p>Somos a Fazenda Campo Alegre, localizada em São Luiz do Purunã/PR. Há 8 anos, nós nos especializamos em hortaliças orgânicas, cultivadas para lhe oferecer alimentos saudáveis e saborosos. Venha descobrir nossos produtos frescos!</p>
         <div class="contato">
           <p>Telefone: (41) 99999-9999</p>
           <p>CNPJ: 12.345.678/0001-90</p>
@@ -27,6 +27,7 @@
   <section class="compra">
     <h2 class="subtitulo">Confira os Produtos:</h2>
     <div id="produtos"></div>
+    <br>
     <hr>
     <br>
     <div class="carrinho">
@@ -44,9 +45,9 @@
               <th>Valor Total:</th>
               <td><div id="valorTotal"></div></td>
             </tr>
-            <tr class="botao">
+            <tr>
               <td></td>
-              <td>
+              <td class="botao">
                 <button class="btn" onclick="finalizarCompra()"><a href="#">Finalizar Compra</a></button>
               </td>
             </tr>
@@ -61,24 +62,31 @@
   <script>
     const produtos = [
       {
-        nome: 'Trento',
+        nome: 'Cenoura (500g)',
         img: '../../images/produto.png',
         quantidade: 0,
-        valor_unidade: 2.50
+        valor_unidade: 4.00
       },
 
       {
-        nome: 'Bala',
+        nome: 'Brócolis (unidade)',
         img: '../../images/produto.png',
         quantidade: 0,
-        valor_unidade: 0.15
+        valor_unidade: 8.00
       },
 
       {
-        nome: 'Refri',
+        nome: 'Beterraba (500g)',
         img: '../../images/produto.png',
         quantidade: 0,
-        valor_unidade: 3.00
+        valor_unidade: 4.50
+      },
+
+      {
+        nome: 'Cebola (500g)',
+        img: '../../images/produto.png',
+        quantidade: 0,
+        valor_unidade: 5.75
       }
     ]
   </script>

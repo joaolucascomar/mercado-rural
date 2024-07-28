@@ -14,7 +14,7 @@
   <section class="info-produtor">
     <h1 class="titulo">Horta Verde Vida</h1>
     <div class="produtor">
-      <img src="../../images/horta.jpg" alt="Imagem da Horta Verde Vida">
+      <img src="../../images/horta.jpg" alt="Imagem de uma horta">
       <div class="descricao">
         <p>Na Horta Verde Vida, em Curitiba/PR, oferecemos verduras frescas, saudáveis e de qualidade, estamos há mais de 5 anos no ramo. Conheça nossos produtos e sinta o frescor direto do campo!</p>
         <div class="contato">
@@ -45,9 +45,9 @@
               <th>Valor Total:</th>
               <td><div id="valorTotal"></div></td>
             </tr>
-            <tr class="botao">
+            <tr>
               <td></td>
-              <td>
+              <td class="botao">
                 <button class="btn" onclick="finalizarCompra()"><a href="#">Finalizar Compra</a></button>
               </td>
             </tr>
@@ -62,24 +62,31 @@
   <script>
     const produtos = [
       {
-        nome: 'Trento',
+        nome: 'Alface (unidade)',
         img: '../../images/produto.png',
         quantidade: 0,
-        valor_unidade: 2.50
+        valor_unidade: 6.00
       },
 
       {
-        nome: 'Bala',
+        nome: 'Salsinha (maço)',
         img: '../../images/produto.png',
         quantidade: 0,
-        valor_unidade: 0.15
+        valor_unidade: 6.50
       },
 
       {
-        nome: 'Refri',
+        nome: 'Agrião (maço)',
         img: '../../images/produto.png',
         quantidade: 0,
-        valor_unidade: 3.00
+        valor_unidade: 7.25
+      },
+
+      {
+        nome: 'Cebolinha (maço)',
+        img: '../../images/produto.png',
+        quantidade: 0,
+        valor_unidade: 4.90
       }
     ]
   </script>

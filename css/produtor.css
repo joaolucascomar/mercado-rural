@@ -1,14 +1,21 @@
 @import url(../css/variaveis.css);
 
-.titulo {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
 
 .info-produtor {
     width: 70%;
     margin: 0 auto;
     text-align: center;
+    border: solid 1px var(--cor-primaria);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.titulo {
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    font-family: var(--fonte-principal);
+    color: var(--cor-primaria);
 }
 
 .produtor {
@@ -16,10 +23,11 @@
     align-items: center;
     justify-content: space-between;
     text-align: left;
+    flex-direction: column
 }
 
 .produtor img {
-    max-width: 250px;
+    width: 90%;
     height: auto;
     border-radius: 8px;
 }
@@ -44,8 +52,8 @@
 }
 
 #produtos {
+    width: 100%;
     margin: 0 auto;
-    width: 40%;
 }
 
 .tabela-produtos {
@@ -69,20 +77,18 @@
     display: block;
 }
 
-.carrinho {
-    display: flex;
-    justify-content: flex-end;
-}
-
 .tabela {
     border: solid 1px black;
-    width: 20%;
     border-radius: 10px;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+}
+
+table {
+    width: 100%;
+}
+
+.botao {
+    text-align: end;
 }
 
 .btn {
@@ -99,4 +105,76 @@ a {
     font-family: var(--fonte-principal);
     text-decoration: none;
     color: white;
+}
+
+/* Estilos para celulares medios */
+@media (min-width: 375px) {
+    .tabela {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* Estilos para tablets */
+@media (min-width: 768px) {
+    .produtor {
+        flex-direction: row
+    }
+
+    .produtor img {
+        width: 30%;
+        height: auto;
+        border-radius: 8px;
+        margin-right: 5%;
+    }
+
+    #produtos {
+        width: 80%;
+    }
+
+    .tabela {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .carrinho {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+/* Estilos para Desktop e Laptop */
+@media (min-width: 1024px) {
+    .produtor {
+        flex-direction: row
+    }
+
+    .produtor img {
+        width: 30%;
+        height: auto;
+        border-radius: 8px;
+        margin-right: 5%;
+    }
+
+    #produtos {
+        width: 40%;
+    }
+
+    .tabela {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .carrinho {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
