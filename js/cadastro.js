@@ -1,6 +1,8 @@
 function mudaPagina() {
     const cadastro = document.getElementById('cadastro');
     cadastro.style.display = 'none';
+    cadastro.style.height = '0';
+    cadastro.style.overflow = 'hidden';
 }
 
 function gerarProdutor(produtor) {
