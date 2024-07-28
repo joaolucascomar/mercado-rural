@@ -5,9 +5,10 @@ listaDosProdutos = () => {
   produtos.map((produto, index)=>{
     listaDosProdutos += ` 
       <tr>
-        <td scope="row" class="col-2"><img src="${produto.img}" width="50" height="50"/></td>
-        <td class="col-7">${produto.nome}</td>
-        <td class="col-3"><input type="button" class="btn btn-success adicionar" key="${index}" value="Adicionar"></td>
+        <td><img src="${produto.img}" width="50" height="50"/></td>
+        <td>${produto.nome}</td>
+        <td>R$ ${produto.valor_unidade.toFixed(2)}</td>
+        <td><input type="button" class="btn botao-tabela adicionar" key="${index}" value="Adicionar"></td>
       </tr>
     `;
   })
@@ -19,12 +20,13 @@ inicializarLoja = () => {
   var containerProdutos = document.getElementById('produtos');
   containerProdutos.innerHTML = `
     <div>
-      <table class="table table-bordered table-hover">
+      <table class="tabela-produtos">
         <thead>
           <tr>
-            <th scope="col" class="col-2">Produto</th>
-            <th scope="col" class="col-7"></th>
-            <th scope="col" class="col-3"></th>
+            <th></th>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -86,13 +88,13 @@ atualizarCarrinho = () => {
   produtos_selecionados.map((produto, index)=>{
     if (produto !== undefined){ 
       listaDosProdutosSelecionanos+= `
-        <tr class="row">
-          <td class="col-2">${produto.nome}</td>
-          <td class="col-7">${produto.quantidade}</td>
-          <td class="col-3">
-            <input type="button" class="btn btn-primary" value="+" onclick="adicionarItem(${index})">
-            <input type="button" class="btn btn-primary" value="-" onclick="removerItem(${index})">  
-            <input type="button" class="btn btn-danger" value="X" onclick="removerProduto(${index})">
+        <tr>
+          <td>${produto.nome}</td>
+          <td>${produto.quantidade}</td>
+          <td>
+            <input type="button" value="+" onclick="adicionarItem(${index})">
+            <input type="button" value="-" onclick="removerItem(${index})">  
+            <input type="button" value="X" onclick="removerProduto(${index})">
           </td>
         </tr>
       `;
@@ -100,12 +102,12 @@ atualizarCarrinho = () => {
   })
 
   containerCarrinho.innerHTML = `
-    <table class="table table-bordered table-hover table-sm">
+    <table>
       <thead>
-        <tr class="row">
-          <th class="col-2">Produto</th>
-          <th class="col-7">Quantidade</th>
-          <th class="col-3">Ações</th>
+        <tr>
+          <th>Produto</th>
+          <th>Quantidade</th>
+          <th>Ações</th>
         </tr>
       </thead>
       <tbody>
@@ -139,7 +141,6 @@ function finalizarCompra() {
   alert('Compra Finalizada com sucesso');
   produtos_selecionados.length = 0;
   atualizarCarrinho();
-  // window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 inicializarLoja();

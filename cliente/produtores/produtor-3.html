@@ -9,58 +9,79 @@
     <title>Produtor 3</title>
 </head>
 <body>
-    <div class="container">
-        <div id="produtos"></div>
-        <hr>
-        <div class="row">
-          <div id="carrinho" class="col-6"></div>
-          <div class="col-1"></div>
-          <div class="col-5">
-            <table class="table table-bordered table-sm">
-              <thead>
-                <tr class="row">
-                  <th class="col-3">Cliente</th>
-                  <td class="col-9">Nome do Cliente</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="row">
-                  <th class="col-3">Valor Total</th>
-                  <td class="col-9"><div id="valorTotal"></div></td>
-                </tr>
-                <tr class="row">
-                  <th class="col-9"></th>
-                  <td class="col-3"><button onclick="finalizarCompra()">Finalizar Compra</button></td>
-                </tr>
-              </tbody>
-            </table>     
-          </div>
+  <iframe src="../../header.html" class="header"></iframe>
+  <hr>
+  <section class="info-produtor">
+    <h1 class="titulo">Horta Verde Vida</h1>
+    <div class="produtor">
+      <img src="../../images/horta.jpg" alt="Imagem da Horta Verde Vida">
+      <div class="descricao">
+        <p>Na Horta Verde Vida, em Curitiba/PR, oferecemos verduras frescas, saudáveis e de qualidade, estamos há mais de 5 anos no ramo. Conheça nossos produtos e sinta o frescor direto do campo!</p>
+        <div class="contato">
+          <p>Telefone: (41) 99999-9999</p>
+          <p>CNPJ: 12.345.678/0001-90</p>
         </div>
       </div>
-      <script>
-        const produtos = [
-          {
-            nome: 'Trento',
-            img: '../../images/produto.png',
-            quantidade: 0,
-            valor_unidade: 2.50
-          },
+    </div>
+  </section>
+  <section class="compra">
+    <h2 class="subtitulo">Confira os Produtos:</h2>
+    <div id="produtos"></div>
+    <hr>
+    <br>
+    <div class="carrinho">
+      <div class="tabela">
+        <div id="carrinho"></div>
+        <table>
+          <thead>
+            <tr>
+              <th>Cliente:</th>
+              <td>Nome do Cliente</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Valor Total:</th>
+              <td><div id="valorTotal"></div></td>
+            </tr>
+            <tr class="botao">
+              <td></td>
+              <td>
+                <button class="btn" onclick="finalizarCompra()"><a href="#">Finalizar Compra</a></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>     
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+  <iframe src="../../footer.html" class="footer"></iframe>
+  <script>
+    const produtos = [
+      {
+        nome: 'Trento',
+        img: '../../images/produto.png',
+        quantidade: 0,
+        valor_unidade: 2.50
+      },
 
-          {
-            nome: 'Bala',
-            img: '../../images/produto.png',
-            quantidade: 0,
-            valor_unidade: 0.15
-          },
+      {
+        nome: 'Bala',
+        img: '../../images/produto.png',
+        quantidade: 0,
+        valor_unidade: 0.15
+      },
 
-          {
-            nome: 'Refri',
-            img: '../../images/produto.png',
-            quantidade: 0,
-            valor_unidade: 3.00
-          }
-        ]
-      </script>
-      <script src="../../js/carrinho.js"></script>
+      {
+        nome: 'Refri',
+        img: '../../images/produto.png',
+        quantidade: 0,
+        valor_unidade: 3.00
+      }
+    ]
+  </script>
+  <script src="../../js/carrinho.js"></script>
 </body>
 </html>

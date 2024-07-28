@@ -31,3 +31,72 @@
 .contato {
     margin: 5px 0;
 }
+
+.compra {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.subtitulo {
+    font-family: var(--fonte-principal);
+    color: var(--cor-secundaria);
+    margin-left: 5%;
+}
+
+#produtos {
+    margin: 0 auto;
+    width: 40%;
+}
+
+.tabela-produtos {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-produtos th, .tabela-produtos td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+}
+
+.tabela-produtos th {
+    background-color: #f2f2f2;
+}
+
+.botao-tabela {
+    padding: 10px;
+    margin: 0 auto;
+    display: block;
+}
+
+.carrinho {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tabela {
+    border: solid 1px black;
+    width: 20%;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    background-color: var(--cor-primaria);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    color: white;
+    font-family: var(--fonte-principal);
+}
+
+a {
+    font-family: var(--fonte-principal);
+    text-decoration: none;
+    color: white;
+}
