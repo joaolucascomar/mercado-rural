@@ -1,6 +1,6 @@
 @import url('variaveis.css');
 
-.titulo {
+.titulo-cadastro {
     font-family: var(--fonte-principal);
     color: var(--cor-primaria);
     margin-left: 10%;
@@ -30,7 +30,7 @@
     flex-direction: column;
 }
 
-.subtitulo {
+.subtitulo-formulario {
     font-family: var(--fonte-principal);
     color: var(--cor-secundaria);
     font-size: 1.2rem;
@@ -70,15 +70,59 @@
 }
 
 #telefone {
-    width: 36%;
+    width: 45%;
 }
 
 #cnpj {
-    width: 41%;
+    width: 60%;
 }
 
 #descricao {
     width: 100%;
+}
+
+.produtor {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    border: solid 1px var(--cor-primaria);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.titulo-produtor {
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    font-family: var(--fonte-principal);
+    color: var(--cor-primaria);
+}
+
+.dados-produtor {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    flex-direction: column
+}
+
+.dados-produtor img {
+    width: 90%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.contato {
+    margin: 20px 0 5px 0;
+}
+
+.subtitulo-produtor {
+    font-family: var(--fonte-principal);
+    color: var(--cor-secundaria);
+    margin-left: 10%;
+}
+
+.texto-produtos {
+    text-align: center;
 }
 
 /* Estilos para tablets */
@@ -91,6 +135,25 @@
     .texto-formulario {
         width: 80%;
     }
+
+    #telefone {
+        width: 40%;
+    }
+    
+    #cnpj {
+        width: 45%;
+    }
+
+    .dados-produtor {
+        flex-direction: row
+    }
+
+    .dados-produtor img {
+        width: 30%;
+        height: auto;
+        border-radius: 8px;
+        margin-right: 5%;
+    }
 }
 
 /* Estilos para Desktop e Laptop */
@@ -102,5 +165,24 @@
 
     .texto-formulario {
         width: 60%;
+    }
+
+    #telefone {
+        width: 36%;
+    }
+    
+    #cnpj {
+        width: 41%;
+    }
+
+    .dados-produtor {
+        flex-direction: row
+    }
+
+    .dados-produtor img {
+        width: 30%;
+        height: auto;
+        border-radius: 8px;
+        margin-right: 5%;
     }
 }

@@ -33,11 +33,7 @@
 }
 
 .contato {
-    margin-top: 20px;
-}
-
-.contato {
-    margin: 5px 0;
+    margin: 20px 0 5px 0;
 }
 
 .compra {
@@ -116,7 +112,6 @@ a {
     .tabela {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
     }
 }
