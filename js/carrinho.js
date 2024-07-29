@@ -99,19 +99,17 @@ function atualizarCarrinho() {
   listaDosProdutosSelecionanos = "";
 
   produtos_selecionados.map((produto, index)=>{
-    if (produto !== undefined){ 
-      listaDosProdutosSelecionanos+= `
-        <tr>
-          <td>${produto.nome}</td>
-          <td>${produto.quantidade}</td>
-          <td>
-            <input type="button" class="btn" value="+" onclick="adicionarItem(${index})">
-            <input type="button" class="btn" value="-" onclick="removerItem(${index})">  
-            <input type="button" class="btn" value="X" onclick="removerProduto(${index})">
-          </td>
-        </tr>
-      `;
-    }
+    listaDosProdutosSelecionanos+= `
+      <tr>
+        <td>${produto.nome}</td>
+        <td>${produto.quantidade}</td>
+        <td>
+          <input type="button" class="btn" value="+" onclick="adicionarItem(${index})">
+          <input type="button" class="btn" value="-" onclick="removerItem(${index})">  
+          <input type="button" class="btn" value="X" onclick="removerProduto(${index})">
+        </td>
+      </tr>
+    `;
   })
 // Seleciona o container do carrinho e cria/atualiza o carrinho, primeiramente percorre os produtos com o .map, e criando um tr para cada, salvando em uma variável
 // index é usado para identificar o produto, é incrementado conforme o map percorre o array
@@ -137,6 +135,11 @@ function atualizarCarrinho() {
 // Por utimo atualiza o valorTotal
 }
 
+function limparCarrinho() {
+  var containerCarrinho = document.getElementById('carrinho');
+  containerCarrinho.innerHTML = '';
+}
+
 function mapearLinks() {
   var links = document.getElementsByClassName('adicionar');
   
@@ -159,8 +162,9 @@ function finalizarCompra() {
   alert('Compra Finalizada com sucesso');
   produtos_selecionados.length = 0;
   atualizarCarrinho();
+  limparCarrinho();
 }
-// Ativada ao finalizar a compra, limpa o array de produtos_selecionados e atualiza o carrinho para que fique vazio
+// Ativada ao finalizar a compra, limpa o array de produtos_selecionados e atualiza o carrinho para que fique vazio, a função limparCarrinho serve para excluir a tabela do carrinho
 
 inicializarLoja();
 mapearLinks();
