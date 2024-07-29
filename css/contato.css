@@ -78,6 +78,7 @@
     .formulario {
         width: 40%;
         padding: 3%;
+        margin: 1.5rem auto
     }
 
     .texto-contato {
@@ -90,9 +91,11 @@
     .formulario {
         width: 30%;
         padding: 2%;
+        margin: 1.5rem auto
     }
 
     .texto-contato {
         width: 60%;
     }
+
 }
