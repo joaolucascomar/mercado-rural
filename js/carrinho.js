@@ -19,6 +19,7 @@ function listaDosProdutos() {
 // Usada na montagem da tabela de produtos, com o map percorre o array de produtos criando um tr para cada e guarda na variável lista de produtos
 // toFixed(2) serve para exibir numeros com duas casas após a virgula
 // index é usado para identificar o produto, é incrementado conforme o map percorre o array
+// a classe adicionar é usada na função que adiciona o produto para captura-lo
 
 
 function inicializarLoja() {
@@ -41,7 +42,7 @@ function inicializarLoja() {
     </div>
   `;
 }
-// Pega na variável a div com id 'produtos' e adiciona no html dela a tabela de produtos, utilizando a listaDosProdutos
+// Define para a variável containerProdutos a div com id 'produtos' e adiciona no html dela a tabela de produtos, utilizando a listaDosProdutos para montar a lista
 
 function removerProduto(index) {
   let produto = produtos_selecionados[index]
@@ -49,12 +50,14 @@ function removerProduto(index) {
   produtos_selecionados.splice(index, 1);
   atualizarCarrinho();
 }
+// Responsavel por remover um produto, recebe um index que faz referencia ao item que a ação foi chamada, define o produto, zera sua quantidade e utiliza o splice, que remove o produto do array de produtos selecionados e atualiza o carrinho
 
 function adicionarItem(index) {
   let produto = produtos_selecionados[index]
   produto.quantidade++;
   atualizarCarrinho();
 }
+// define o produto, incrementa sua quantidade e atualiza o carrinho
 
 function removerItem(index) {
   let produto = produtos_selecionados[index]
@@ -65,6 +68,7 @@ function removerItem(index) {
     atualizarCarrinho();
   }
 }
+// define o produto, caso a quantidade seja menor ou igual a um, ele é removido, se não sua quantidade é apenas decrementada e o carrinho atualizado
 
 function valorTotal() {
   let valorTotal = 0.0;
@@ -75,6 +79,7 @@ function valorTotal() {
   
   return valorTotal;
 }
+// Define o valor total, percorre o array de produtos selecionados e os soma na let de valor total
 
 atualizarValorTotal = () => {
   var containerCarrinho = document.getElementById('valorTotal');
@@ -86,8 +91,10 @@ atualizarValorTotal = () => {
     `;
   }
 }
+// Seleciona o elemento html que exibe o valor total e o atualiza com a função valorTotal
+// toFixed(2) serve para exibir numeros com duas casas após a virgula
 
- function atualizarCarrinho() {
+function atualizarCarrinho() {
   var containerCarrinho = document.getElementById('carrinho');
   listaDosProdutosSelecionanos = "";
 
@@ -106,6 +113,9 @@ atualizarValorTotal = () => {
       `;
     }
   })
+// Seleciona o container do carrinho e cria/atualiza o carrinho, primeiramente percorre os produtos com o .map, e criando um tr para cada, salvando em uma variável
+// index é usado para identificar o produto, é incrementado conforme o map percorre o array
+// é por meio dos buttons que as funções de adicionarItem, removerItem e removerProduto são chamadas
 
   containerCarrinho.innerHTML = `
     <table>
@@ -121,8 +131,10 @@ atualizarValorTotal = () => {
       </tbody>
     </table>
   `;
+// Cria a estrutura da tabela do carrinho, e utiliza o array criado acima 
 
   atualizarValorTotal();
+// Por utimo atualiza o valorTotal
 }
 
 function mapearLinks() {
@@ -148,6 +160,8 @@ function finalizarCompra() {
   produtos_selecionados.length = 0;
   atualizarCarrinho();
 }
+// Ativada ao finalizar a compra, limpa o array de produtos_selecionados e atualiza o carrinho para que fique vazio
 
 inicializarLoja();
 mapearLinks();
+// Chamada das funções de inicialização que criam a tabela e a fazem funcionar 
