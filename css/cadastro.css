@@ -163,6 +163,10 @@
         padding: 2%;
     }
 
+    .descricao {
+        width: 60%
+    }
+
     .texto-formulario {
         width: 60%;
     }
