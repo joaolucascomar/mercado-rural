@@ -2,8 +2,8 @@ function mudaPagina() {
     const cadastro = document.getElementById('cadastro');
     cadastro.style.display = 'none';
     cadastro.style.height = '0';
-    cadastro.style.overflow = 'hidden';
 }
+// Ela captura a seção do cadastro e a oculta, definindo seu display para none, e sua altura ocupada para zero 
 
 function gerarProdutor(produtor) {
     var containerProdutor = document.getElementById('produtor');
@@ -27,9 +27,11 @@ function gerarProdutor(produtor) {
     <p class="texto-produtos">Nenhum Produto Cadastrado...</p>
     `;
 }
+// Cria o 'produtor' com base no valores do form, seleciona a seção do produtor e modifica seu html, com o uso de template string (``) é posivel passar os dados dos atributos de produtor e cria-lo dinamicamente
 
 function enviarFormulario(event) {
     event.preventDefault();
+    // Impede que a pgina recarregue
 
     const dadosProdutor = {
         nome: document.getElementById('nome').value,
@@ -38,8 +40,10 @@ function enviarFormulario(event) {
         cnpj: document.getElementById('cnpj').value,
         descricao: document.getElementById('descricao').value
     }
+    // Captura os dados do form com o uso dos seus ids em um objeto dadosProdutor
     
     alert("Cadastro realizado com sucesso!");
     mudaPagina()
     gerarProdutor(dadosProdutor);
 }
+// Chamada ao submeter o formulário
