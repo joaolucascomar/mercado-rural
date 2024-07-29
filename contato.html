@@ -21,8 +21,10 @@
         <div class="formulario">
             <h2 class="subtitulo">Envie sua mensagem</h2>
             <form class="campos-formulario" onsubmit="enviarFormulario()">
+                <!-- onsubmit realiza a função ao enviar o form -->
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" placeholder="Insira seu nome completo" required>
+                <!-- No form o type tem relação em como o campo é exibido ou na formatação da informação, o id é usado para estilizar e o name se relaciona com o for da label -->
                 <br>
                 <br>
                 <label for="email">E-mail:</label>
@@ -46,6 +48,7 @@
         function enviarFormulario() {
             alert("Mensagem enviada com sucesso!")
         }
+        // Exibe um alert na tela quando envia o form
     </script>
 </body>
 </html>

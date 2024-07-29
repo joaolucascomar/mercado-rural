@@ -27,12 +27,14 @@
   <section class="compra">
     <h2 class="subtitulo">Confira os Produtos:</h2>
     <div id="produtos"></div>
+    <!-- É na div com id 'produtos' que fica a lista com os produtos para compra, ela é criada dinâmicamente com o js em carrinho.js -->
     <br>
     <hr>
     <br>
     <div class="carrinho">
       <div class="tabela">
         <div id="carrinho"></div>
+        <!-- É na div com id 'carrinho' que o carrinho é montado e atualizado dinamicamente, com base na interação com a tabela de produtos e as ações dentro do próprio carrinho, ela é criada e atualizada dinâmicamente com o js em carrinho.js -->
         <table>
           <thead>
             <tr>
@@ -49,6 +51,7 @@
               <td></td>
               <td class="botao">
                 <button class="btn" onclick="finalizarCompra()"><a href="#">Finalizar Compra</a></button>
+                <!-- Função com um alert de compra finalizada, que limpa o carrinho e o atualiza, a tag a serve para que suba ao topo da pagina -->
               </td>
             </tr>
           </tbody>
@@ -60,6 +63,8 @@
   <br>
   <iframe src="../../footer.html" class="footer"></iframe>
   <script>
+    // A lista de produtos é criada dinamicamente com base na const abaixo, para que a lógica js possa ser genérica e os produtos sejam adicionados no próprio arquivo html de produtor
+    // É utilizado um array de objetos, com os atributos nome, img, quantidade e valor_unidade 
     const produtos = [
       {
         nome: 'Orégano (maço)',
@@ -91,5 +96,6 @@
     ]
   </script>
   <script src="../../js/carrinho.js"></script>
+  <!-- Importação do js da pagina -->
 </body>
 </html>

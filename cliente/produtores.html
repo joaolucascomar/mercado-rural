@@ -19,6 +19,7 @@
             <option value="curitiba">Curitiba</option>
             <option value="sao-luiz">São Luiz do Purunã</option>
         </select>
+        <!-- No select é onde é feito o filtro, cada option tem um id que corresponde a uma section ou a todos, com as classes e os ids, os elementos são capturados e manipulados no filtro.js -->
         <p class="frete">Oferecemos frete grátis para compras na mesma cidade</p>
     </div>
     <section id="curitiba" class="categoria">
@@ -65,6 +66,7 @@
         </div>
         <br>
 	</section>
+    <!-- As ids nas sections e suas classes são utilizadas na lógica de exibição e ocultação, definida pelo filtro -->
 	<section id="sao-luiz" class="categoria">
 		<h2 class="subtitulo">Produtores de São Luiz do Purunã:</h2>
         <div class="cards">
@@ -112,6 +114,7 @@
     <br>
     <br>
     <iframe src="../footer.html" class="footer"></iframe>
+    <script src="../js/filtro.js"></script>
+    <!-- Importação do js da pagina -->
 </body>
-<script src="../js/filtro.js"></script>
 </html>
