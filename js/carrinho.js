@@ -19,7 +19,7 @@ function listaDosProdutos() {
 // Usada na montagem da tabela de produtos, com o map percorre o array de produtos criando um tr para cada e guarda na variável lista de produtos
 // toFixed(2) serve para exibir numeros com duas casas após a virgula
 // index é usado para identificar o produto, é incrementado conforme o map percorre o array
-// a classe adicionar é usada na função que adiciona o produto para captura-lo
+// A classe adicionar é usada na função que adiciona o produto para captura-lo
 
 
 function inicializarLoja() {
@@ -57,7 +57,7 @@ function adicionarItem(index) {
   produto.quantidade++;
   atualizarCarrinho();
 }
-// define o produto, incrementa sua quantidade e atualiza o carrinho
+// Define o produto, incrementa sua quantidade e atualiza o carrinho
 
 function removerItem(index) {
   let produto = produtos_selecionados[index]
@@ -68,7 +68,7 @@ function removerItem(index) {
     atualizarCarrinho();
   }
 }
-// define o produto, caso a quantidade seja menor ou igual a um, ele é removido, se não sua quantidade é apenas decrementada e o carrinho atualizado
+// Define o produto, caso a quantidade seja menor ou igual a um, ele é removido, se não sua quantidade é apenas decrementada e o carrinho atualizado
 
 function valorTotal() {
   let valorTotal = 0.0;
@@ -113,7 +113,7 @@ function atualizarCarrinho() {
   })
 // Seleciona o container do carrinho e cria/atualiza o carrinho, primeiramente percorre os produtos com o .map, e criando um tr para cada, salvando em uma variável
 // index é usado para identificar o produto, é incrementado conforme o map percorre o array
-// é por meio dos buttons que as funções de adicionarItem, removerItem e removerProduto são chamadas
+// É por meio dos buttons que as funções de adicionarItem, removerItem e removerProduto são chamadas
 
   containerCarrinho.innerHTML = `
     <table>
@@ -157,6 +157,12 @@ function mapearLinks() {
     })
   } 
 }
+// Na variável links é atribuido os buttons da tabela, usando a classe adicionar
+// Com o for, percorre cada um dos links adicionando um escutador de evento 'click' 
+// Na variavel key é atribuido o atributo key do link clicado, onde key corresponde a seu índice
+// A variável produto é criada, selecionando do array de produtos, buscando pelo indice da variável key e ela é incrementada
+// O if checa se o array de produtos selecionados não inclui o produto capturado ('!' significa negação) e se true, adicona a produtos_selecionados com .push()
+// Por último o carrinho é atualizado
 
 function finalizarCompra() {
   alert('Compra Finalizada com sucesso');
