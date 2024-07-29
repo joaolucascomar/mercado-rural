@@ -2,8 +2,9 @@ function mudaPagina() {
     const cadastro = document.getElementById('cadastro');
     cadastro.style.display = 'none';
     cadastro.style.height = '0';
+    cadastro.style.overflow = 'hidden';
 }
-// Ela captura a seção do cadastro e a oculta, definindo seu display para none, e sua altura ocupada para zero 
+// Ela captura a seção do cadastro e a oculta, definindo seu display para none, e sua altura ocupada para zero, além de ocultar a barra de rolagem com overflow = 'hidden'
 
 function gerarProdutor(produtor) {
     var containerProdutor = document.getElementById('produtor');
