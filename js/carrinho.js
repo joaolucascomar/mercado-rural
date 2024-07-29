@@ -1,4 +1,5 @@
 const produtos_selecionados = [];
+// constante onde são armazenados os produtos do carrinho
 
 function listaDosProdutos() {
   listaDosProdutos = "";
@@ -15,6 +16,10 @@ function listaDosProdutos() {
 
   return listaDosProdutos;
 }
+// Usada na montagem da tabela de produtos, com o map percorre o array de produtos criando um tr para cada e guarda na variável lista de produtos
+// toFixed(2) serve para exibir numeros com duas casas após a virgula
+// index é usado para identificar o produto, é incrementado conforme o map percorre o array
+
 
 function inicializarLoja() {
   var containerProdutos = document.getElementById('produtos');
@@ -36,6 +41,7 @@ function inicializarLoja() {
     </div>
   `;
 }
+// Pega na variável a div com id 'produtos' e adiciona no html dela a tabela de produtos, utilizando a listaDosProdutos
 
 function removerProduto(index) {
   let produto = produtos_selecionados[index]
